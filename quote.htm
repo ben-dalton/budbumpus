@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Bud Bumpus Saddles</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
+  <!--[if lt IE 9]>	
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+ <script type="text/javascript" src="js/modernizr.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script> 
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33124020-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div class="center">
+<header>
+	<a href="index.htm"><img src="img/headerlogo.png" class="logo" alt="Bud Bumpus Saddlery" /></a>
+	<nav id="mainnav" class="center">
+		<img class="stitch" src="img/stitch.png" alt="stitch" />
+        <ul> 
+			<li><a href="index.htm">Home</a></li>
+			<li><img src="img/smstar.png" alt="small star" /></li>
+			<li><a href="photos.htm">Photos</a></li>
+			<li><img src="img/smstar.png" alt="small star" /></li>
+			<li><a class="present" href="quote.htm">Quote</a></li>
+			<li><img src="img/smstar.png" alt="small star" /></li>
+			<li><a href="about.htm">About</a></li>	
+		</ul>
+        <img class="stitch" src="img/stitch.png" alt="stitch" />
+	</nav>
+</header>
+
+<div id="contentcontainer">
+
+
+<form id="quoteform" method="post" name="myemailform" action="form-to-email.php">
+<h2>Get a Quote!</h2>
+<fieldset id="contactinfo" class="formsection">
+<legend>Contact Information</legend>
+<label for="name">Name:</label>
+<input id="name" name="name" placeholder="First and last name" required autofocus type="text">
+<label for="phone">Phone:</label>
+<input id="phone" name="phone" placeholder="ex. 940-456-2179" required type="tel">
+<label for="email">Email:</label>
+<input id="email" name="email" placeholder="example@domain.com" type="email">
+</fieldset>
+
+<fieldset  id="quote-type" class="formcheckbox">
+<legend>I'm interested in a quote for...</legend>
+<input type="checkbox" onclick="showMe('saddleform', this)" name="saddle" value="saddle" id="saddle"><label for="saddle">a saddle</label><br>
+<input type="checkbox" onclick="showMe('chapform', this)" name="chaps" value="chaps" id="chaps"><label for="chaps">chaps or chinks</label><br>
+<input type="checkbox" onclick="showMe('otherform', this)" name="otherleather" value="otherleather" id="otherleather"><label for="otherleather">other leatherwork</label><br>
+</fieldset>
+
+<section id="saddlequote">
+<div id="saddleform" class="hidden">
+<h3>Saddles</h3>
+<fieldset id="saddle-description" class="left">
+<legend>Saddle Description&#58;</legend>
+</fieldset>
+<fieldset class="handedness formcheckbox">
+<input id="lefthanded" name="handed" value="lefthanded" type="radio">
+<label for="lefthanded">Left-handed</label>
+<input id="righthanded" name="handed" value="righthanded" type="radio">
+<label for="righthanded">Right-handed</label>
+</fieldset>
+<fieldset class="textinput">
+<label for="tree">Tree</label>
+<textarea id="tree" name="tree" rows="1"></textarea>
+<label for="seat">Seat</label>
+<textarea id="seat" name="seat" rows="1"></textarea>
+<label for="swells">Swells</label>
+<textarea id="swells" name="swells" rows="1"></textarea>
+<label for="cantle">Cantle</label>
+<textarea id="cantle" name="cantle" rows="1"></textarea>
+<label for="horn">Horn</label>
+<textarea id="horn" name="horn" rows="1"></textarea>
+<label for="gullet">Gullet</label>
+<textarea id="gullet" name="guller" rows="1"></textarea>
+<label for="bars">Bars</label>
+<textarea id="bars" name="bars" rows="1"></textarea>
+<label for="brands">Special Brands</label>
+<textarea id="brands" name="brands" rows="1"></textarea>
+</fieldset>
+
+
+<fieldset id="special-features" class="dropdown">
+<legend>Special Features&#58;</legend>
+<label for="tooling">Tooling</label>
+<select id="tooling" name="tooling">
+<option value="blank"> </option>
+<option value="full">Full</option>
+<option value="half breed">Half breed</option>
+</select>
+<label for="texture">Texture</label>
+<select id="texture" name="texture">
+<option value="blank"> </option>
+<option value="roughout">Rough out</option>
+<option value="slickout">Slick out</option>
+</select>
+<label for="rigtype">Rig Type</label>
+<select id="rigtype" name="rigtype">
+<option value="blank"> </option>
+<option value="fulldouble">Full Double</option>
+<option value="seveneighths">7/8</option>
+<option value="centerfire">Center Fire</option>
+</select>
+<label for="seatfeature">Seat</label>
+<select id="seatfeature" name="seatfeature">
+<option value="blank"> </option>
+<option value="flat">Flat</option>
+<option value="med-low">Medium-low</option>
+<option value="medium">Medium</option>
+<option value="med-high">Medium-high</option>
+<option value="high">High</option>
+</select>
+<label for="shirttype">Shirt Type</label>
+<select id="shirttype" name="shirttype">
+<option value="blank"> </option>
+<option value="round">Round</option>
+<option value="semi-square">Semi-square</option>
+<option value="square">Square</option>
+</select>
+<label for="hornfeature">Horn</label>
+<select id="hornfeature" name="hornfeature">
+<option value="blank"> </option>
+<option value="regular wrap">Regular wrap</option>
+<option value="rawhide rim">Rawhide rim</option>
+<option value="rawhide wrap">Rawhide wrap</option>
+</select>
+<label for="roll">Roll</label>
+<select id="roll" name="roll">
+<option value="blank"> </option>
+<option value="straight">Straight</option>
+<option value="cheyenne">Cheyenne</option>
+</select>
+<label for="fenders">Fenders</label>
+<select id="fenders" name="fenders">
+<option value="blank"> </option>
+<option value="cutters">Cutters</option>
+<option value="roper">Roper</option>
+<option value="number three">&#35;3</option>
+</select>
+</fieldset>
+
+<fieldset id="stirrups" class="dropdown">
+<legend>Stirrups&#58;</legend>
+<label for="stirruptype">Type</label>
+<textarea id="stirruptype" name="stirruptype" rows="1"></textarea>
+<label for="covering">Covering</label>
+<select id="covering" name="covering">
+<option value="blank"> </option>
+<option value="leather">Leather</option>
+<option value="rawhide">Rawhide</option>
+</select>
+</fieldset>
+
+<fieldset id="cinch" class="dropdown">
+<legend>Cinch&#58;</legend>
+<label for="flankcinch">Flank cinch</label>
+<select id="flankcinch" name="flankcinch">
+<option value="blank"> </option>
+<option value="roper">Roper</option>
+<option value="size">Size</option>
+<option value="cutter">Cutter</option>
+</select>
+<label for="frontcinch">Front Cinch (length)</label>
+<select id="frontcinch" name="frontcinch">
+<option value="blank"> </option>
+<option value="24">24"</option>
+<option value="25">25"</option>
+<option value="26">26"</option>
+<option value="27">27"</option>
+<option value="28">28"</option>
+<option value="29">29"</option>
+<option value="30">30"</option>
+<option value="31">31"</option>
+<option value="32">32"</option>
+</select>
+</fieldset>
+
+<fieldset class="other-specs">
+<legend>Other Specifications&#58;</legend>
+<label for="otherspecs"> </label>
+<textarea id="otherspecs" name="otherspecs" rows="2"></textarea>
+</fieldset>
+</div>
+</section>
+
+<section id="chapquote">
+<div id="chapform" class="hidden">
+<h3>Chaps/Chinks</h3>
+<fieldset class="other-specs left">
+<legend>Description&#58;</legend>
+<label for="chapdesc"> </label>
+<textarea id="chapdesc" name="chapdesc" rows="2"></textarea>
+</fieldset>
+</div>
+</section>
+
+<section id="otherquote">
+<div id="otherform" class="hidden">
+<h3>Other Leatherwork</h3>
+<fieldset class="other-specs left">
+<legend>Description&#58;</legend>
+<label for="otherdesc"> </label>
+<textarea id="otherdesc" name="otherdesc" rows="2"></textarea>
+</fieldset>
+</div>
+</section>
+
+<input type="submit" value="Submit" name="submit" class="submit" />	
+</form>
+</div>
+<img class="stitch center" src="img/stitch.png" alt="stitch" />
+</div>
+
+<footer id="footer" class="text">
+    <p>&copy; Bud Bumpus Saddlery 2012-2013</p>
+    <a href="http://www.daltondevelopment.com" target="_blank">web design</a>
+    <p><br /></p>
+    <p>415 Fourth St.</p>
+	<p>Graham, TX 76450</p>
+	<p>940-456-2179</p>
+</footer>
+</body>
+</html>
